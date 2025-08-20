@@ -36,8 +36,8 @@ export const Basic: Story = {
         <Space></Space>
         <div style={{ paddingTop: "16px", width: "100%" }}>
           <FormSubmitter
-            request={(data: any) => fetch(`http://ip-api.com/json/${data.ip}`).then((res) => res.json())}
-            decideOk={(resp: any) => resp.status === "success"}
+            request={(data: any) => fetch(`https://ipapi.co/${data.ip}/json/`).then((res) => res.json())}
+            decideOk={(resp: any) => !resp.error}
             onFinish={(resp: any) => {
               Modal.info({
                 title: "查询成功",
@@ -95,8 +95,8 @@ export const ButtonAction: Story = {
             <FormSubmitter
               buttonMode
               params={{ ip: "8.8.8.8" }}
-              request={(data: any) => fetch(`http://ip-api.com/json/${data.ip}`).then((res) => res.json())}
-              decideOk={(resp: any) => resp.status === "success"}
+              request={(data: any) => fetch(`https://ipapi.co/${data.ip}/json/`).then((res) => res.json())}
+              decideOk={(resp: any) => !resp.error}
               onFinish={(resp: any) => {
                 Modal.info({
                   title: "查询成功",
@@ -129,8 +129,8 @@ export const ButtonAction: Story = {
                 />
               }
               params={{ ip: "8.8.8.8" }}
-              request={(data: any) => fetch(`http://ip-api.com/json/${data.ip}`).then((res) => res.json())}
-              decideOk={(resp: any) => resp.status === "success"}
+              request={(data: any) => fetch(`https://ipapi.co/${data.ip}/json/`).then((res) => res.json())}
+              decideOk={(resp: any) => !resp.error}
               onFinish={(resp: any) => {
                 Modal.info({
                   title: "操作成功",
