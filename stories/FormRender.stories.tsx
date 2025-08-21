@@ -335,6 +335,7 @@ export const ComplexForm: Story = {
                   label: "应用场景",
                   compProps: {
                     schemas: {
+                      type: "array",
                       properties: {
                         type: {
                           span: 24,
