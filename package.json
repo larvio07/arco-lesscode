@@ -1,10 +1,12 @@
 {
   "name": "arco-lesscode",
-  "version": "1.0.0",
-  "main": "index.js",
-  "types": "index.d.ts",
+  "version": "1.0.1",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build -o storybook-static",
     "deploy-storybook": "npm run build-storybook && gh-pages -d storybook-static"
@@ -16,12 +18,12 @@
   "keywords": [
     "arco-desgin"
   ],
-  "author": "vc",
-  "license": "ISC",
+  "author": "larvio07",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/larvio07/arco-lesscode/issues"
   },
-  "homepage": "https://github.com/larvio07/arco-lesscode#readme",
+  "homepage": "https://larvio07.github.io/arco-lesscode",
   "description": "",
   "peerDependencies": {
     "@arco-design/web-react": "^2.66.4",
