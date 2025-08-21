@@ -1,6 +1,6 @@
 {
   "name": "arco-lesscode",
-  "version": "1.0.4",
+  "version": "1.0.7",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {

@@ -23,7 +23,7 @@ export type InjectPropsType = {
     | ((props: Record<string, unknown>) => React.ReactNode);
 };
 
-export const InjectProps: React.FC<InjectPropsType> = React.memo(({ schema, children, submitMode, ...props }) => {
+export const InjectProps = ({ schema, children, submitMode, ...props }: InjectPropsType) => {
   const Request = useContext(RequestContext);
 
   // 计算注入的 props
@@ -41,7 +41,7 @@ export const InjectProps: React.FC<InjectPropsType> = React.memo(({ schema, chil
   }, [schema, Request.data]);
 
   if (typeof children === "function") {
-    return children(injectProps);
+    return <>{children(injectProps)}</>;
   }
 
   const childrenWithNewProps = React.Children.map(children, (child) => {
@@ -55,4 +55,4 @@ export const InjectProps: React.FC<InjectPropsType> = React.memo(({ schema, chil
   });
 
   return <>{childrenWithNewProps}</>;
-});
+};
