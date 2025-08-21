@@ -2,15 +2,13 @@ import { Button, Form, Grid, Tabs, TabsProps } from "@arco-design/web-react";
 import { IconPlus } from "@arco-design/web-react/icon";
 import { useState } from "react";
 import { FromCompRender } from "../../libs";
-import { FormCompMatchType } from "../../../typings";
+import { FormCompMatchType, FormSchemas } from "../../../typings";
 
 export interface TabsListType<T = any> extends Partial<TabsProps> {
   tabNameKey?: string;
   field: string;
   span: number;
-  schemas: {
-    properties: Record<string, FormCompMatchType>;
-  };
+  schemas: FormSchemas;
   value: T[];
 }
 
