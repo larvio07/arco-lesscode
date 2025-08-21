@@ -12,9 +12,9 @@ import type {
   TypographyTitleProps,
 } from "@arco-design/web-react";
 
-import type { RequestProviderType, InjectPropsType } from "../components/RequestProvider";
-import type { TabsListType } from "../components/TabsList";
-import { componentMaps, providerMaps } from "../constants/components";
+import type { RequestProviderType, InjectPropsType } from "./src/components/RequestProvider";
+import type { TabsListType } from "./src/components/TabsList";
+import { componentMaps, providerMaps } from "./src/constants/components";
 
 declare global {
   const isDEV: boolean;
@@ -32,12 +32,10 @@ type CompProps = Partial<
   | SelectProps
   | CascaderProps
   | DatePickerProps
-  | PageSelectProps
   | RadioProps
   | CheckboxProps
   | TypographyTitleProps
   | FormWrapType
-  | CodeEditorProps
   | TabsListType
 >;
 

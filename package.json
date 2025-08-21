@@ -1,11 +1,12 @@
 {
   "name": "arco-lesscode",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
+    "publish": "npm publish --access public",
     "prepublishOnly": "npm run build",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build -o storybook-static",

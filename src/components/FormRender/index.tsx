@@ -2,7 +2,7 @@ import type { FormInstance } from "@arco-design/web-react";
 import { Button, Form, Space } from "@arco-design/web-react";
 import { useState, useCallback, useEffect } from "react";
 import { FormWrapperRender } from "../../libs/index";
-import type { FormCompMatchType, FormSchemas } from "../../types";
+import type { FormCompMatchType, FormSchemas } from "../../../typings";
 import type { FormProps } from "@arco-design/web-react";
 
 const { useForm } = Form;

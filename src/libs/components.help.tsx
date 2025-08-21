@@ -3,7 +3,7 @@ import { IconArrowFall, IconArrowRise, IconDelete, IconPlus } from "@arco-design
 import React, { FC } from "react";
 import { InjectProps } from "../components/RequestProvider";
 import { componentMaps, providerMaps } from "../constants/components";
-import { FormCompMatchType, FormWrapType } from "../types";
+import { FormCompMatchType, FormWrapType } from "../../typings";
 
 //表单组件渲染规则解释器
 export const FromCompRender: FC<FormCompMatchType & { field: string; formProps?: Partial<FormProps> }> = (props) => {

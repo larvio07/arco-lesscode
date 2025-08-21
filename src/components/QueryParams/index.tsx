@@ -5,7 +5,7 @@ import React, { useState } from "react";
 
 import { FormWrapperRender } from "../../libs";
 
-import { FormCompMatchType } from "../../types";
+import { FormCompMatchType } from "../../../typings";
 
 const { useForm } = Form;
 
@@ -67,11 +67,11 @@ export function QueryParams(
             ...props.schemas,
             properties: properties,
           }}
-          onValuesChange={(value, values) => {
+          onValuesChange={(value: any, values: any) => {
             onValuesChange(value, values);
             props?.onValuesChange && props?.onValuesChange(value, values);
           }}
-          onSubmit={(value) => {
+          onSubmit={(value: any) => {
             props.onSearch && props.onSearch(value);
           }}
           labelCol={{ span: props.labelCol || 5 }}
